@@ -5,6 +5,7 @@ import ImageTwo from '@/public/2.png'
 import ImageFour from '@/public/4.png'
 import ImageOne from '@/public/1.png'
 import ImageThree from '@/public/3.png'
+import ImageFive from '@/public/SD.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -50,6 +51,10 @@ export default function Carousel() {
         </div>
         <div className="text-center my-3">
             <h3 className='text-textColor text-3xl font-bold font-Lobster'>Farmer`&apos;s Market Platform Challenge</h3>
+            <p className='text-textColor my-2 text-decoration-underline'>All Rights Reserved By Desishub Community</p>
+        </div>
+        <div className="">
+          <Image src={ImageFive} className='w-full h-full block object-cover' alt="" />
         </div>
     </div>
   )
