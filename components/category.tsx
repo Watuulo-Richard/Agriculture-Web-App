@@ -1,17 +1,19 @@
 import React from 'react'
 import SingleCategoryProduct from './singlecategoryproduct'
+import { categoryProp } from '@/Types/types'
 
-export default function Category() {
+export default async function Category({categoryData}:{categoryData:categoryProp[]}) {
   return (
     <div className='mx-2 grid grid-cols-4 gap-2'>
-        <SingleCategoryProduct/>
-        <SingleCategoryProduct/>
-        <SingleCategoryProduct/>
-        <SingleCategoryProduct/>
-        <SingleCategoryProduct/>
-        <SingleCategoryProduct/>
-        <SingleCategoryProduct/>
-        <SingleCategoryProduct/>
+        {
+            categoryData?.map((category)=>{
+                return (
+            <div key={category.id}>
+                    <SingleCategoryProduct  title={category.title} image={category.image}/>
+            </div>
+            )
+          })  
+        }
     </div>
   )
 }
