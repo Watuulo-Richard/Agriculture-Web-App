@@ -8,9 +8,15 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        Jost: ["Jost", "serif"],
+        Lobster: ["Lobster", "serif"]
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primaryColor: "#FFFFFF",
+        secondaryColor: "#4CAF50",
+        textColor: "#4CAF50",
+        textColorTwo: "#121212",
       },
     },
   },
