@@ -8,7 +8,7 @@ import Search from '@/components/search'
 import React from 'react'
 
 export default async function page() {
-  const receivedProducts = await fetchProducts() || []
+  const receivedProducts = await fetchProducts()||[]
   console.log(receivedProducts)
   return (
     <div>

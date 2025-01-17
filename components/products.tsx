@@ -13,7 +13,7 @@ export default async function Products({productsData}:{productsData:productProp[
       productsData.map((product)=>{
         return (
           <div key={product.id} className="">
-            <SingleProduct title={product.title} image={product.images} price={product.price}  description={product.description} quantity={product.quantity}/>
+            <SingleProduct id={product.id} title={product.title} image={product.images} price={product.price}  description={product.description} quantity={product.quantity}/>
           </div>
         )
       })

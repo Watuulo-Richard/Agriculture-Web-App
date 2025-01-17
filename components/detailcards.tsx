@@ -9,7 +9,7 @@ export default function DetailCards({productsData}:{productsData:productProp[]})
         productsData.map((product)=>{
           return (
             <div className="" key={product.id}>
-              <DetailCard title={product.title} description={product.description} image={product.images} price={product.price} quantity={product.quantity}/>
+              <DetailCard id={product.id} title={product.title} description={product.description} image={product.images} price={product.price} quantity={product.quantity}/>
             </div>
           )
         })
