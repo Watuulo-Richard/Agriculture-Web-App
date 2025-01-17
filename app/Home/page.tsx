@@ -1,4 +1,4 @@
-import { fetchCategories } from '@/actions/categoryfetch'
+import { fetchCategories, fetchProducts } from '@/actions/categoryfetch'
 import Category from '@/components/category'
 import MinHeading from '@/components/minheading'
 import Navigation from '@/components/navigation'
@@ -9,14 +9,16 @@ import React from 'react'
 
 export default async function HomeScreen() {
     const recievedCategories= await fetchCategories() || []
-    console.log(recievedCategories)
+    // console.log(recievedCategories)
+    const recievedProducts = await fetchProducts() || []
+    // console.log(recievedProducts)
   return (
     <>
        <Navigation/>
        <Search/>
        <MinHeading/>
        <Category categoryData={recievedCategories}/>
-       <Products/>
+       <Products productsData={recievedProducts}/>
        <NavigationBottom/>
     </>
   )

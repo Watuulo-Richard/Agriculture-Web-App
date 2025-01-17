@@ -1,6 +1,7 @@
 "use server"
 
 import { categoryProp } from "@/Types/types"
+import { productProp } from "@/Types/types"
 
 const API = 'https://market-hazel.vercel.app/api/categories'
 export async function fetchCategories(){
@@ -9,6 +10,18 @@ export async function fetchCategories(){
         const recievedCategories = await response.json()
         return recievedCategories.data as categoryProp[]
     } catch(error) {
+        console.log(error)
+    }
+}
+
+const PDTAPI = 'https://market-hazel.vercel.app/api/products'
+
+export async function fetchProducts(){
+    try {
+        const res = await fetch (PDTAPI)
+        const recievedProducts = await res.json()
+        return recievedProducts.data as productProp[]
+    } catch(error){
         console.log(error)
     }
 }
